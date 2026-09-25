@@ -9,15 +9,11 @@ const launcherDownload =
 
 
 
-
 // Кнопка скачивания
 
 function downloadLauncher() {
 
-    window.open(
-        launcherDownload,
-        "_blank"
-    );
+    window.location.href = launcherDownload;
 
 }
 
@@ -25,36 +21,30 @@ function downloadLauncher() {
 
 
 
-// Плавное появление элементов
+// Плавное появление блоков
 
 const observer = new IntersectionObserver(
 
-(entries)=>{
+    (entries) => {
 
+        entries.forEach(entry => {
 
-entries.forEach(entry=>{
+            if (entry.isIntersecting) {
 
+                entry.target.style.opacity = "1";
 
-    if(entry.isIntersecting){
+                entry.target.style.transform =
+                    "translateY(0)";
 
+            }
 
-        entry.target.style.opacity="1";
+        });
 
-        entry.target.style.transform=
-            "translateY(0)";
+    },
 
-
+    {
+        threshold: 0.15
     }
-
-
-});
-
-
-},
-
-{
-    threshold:0.15
-}
 
 );
 
@@ -64,20 +54,19 @@ entries.forEach(entry=>{
 
 document
 .querySelectorAll(
-".card, .screens img, .download"
+    ".card, .screens img, .download"
 )
-
-.forEach(element=>{
-
-
-    element.style.opacity="0";
+.forEach(element => {
 
 
-    element.style.transform=
+    element.style.opacity = "0";
+
+
+    element.style.transform =
         "translateY(40px)";
 
 
-    element.style.transition=
+    element.style.transition =
         "0.7s ease";
 
 
@@ -91,10 +80,9 @@ document
 
 
 
+// Зеленые частицы на фоне
 
-// Эффект частиц на фоне
-
-function createParticle(){
+function createParticle() {
 
 
     const particle =
@@ -106,11 +94,11 @@ function createParticle(){
 
 
     particle.style.left =
-        Math.random()*100+"%";
+        Math.random() * 100 + "%";
 
 
     particle.style.animationDuration =
-        (5+Math.random()*8)+"s";
+        (5 + Math.random() * 8) + "s";
 
 
     document.body.appendChild(
@@ -118,16 +106,14 @@ function createParticle(){
     );
 
 
-
-    setTimeout(()=>{
+    setTimeout(() => {
 
         particle.remove();
 
-    },13000);
+    }, 13000);
 
 
 }
-
 
 
 
