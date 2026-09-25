@@ -2,17 +2,12 @@
 // MCBurmalda Launcher Website
 // ============================
 
-
-// Ссылка на скачивание лаунчера
-// Потом замени на свою ссылку GitHub Releases
-
 const launcherDownload =
-"https://github.com/ТВОЙ_АККАУНТ/MCBurmaldaLauncher/releases/latest";
+"https://github.com/MCBurmaldaLauncher/MCBurmaldaLauncher/releases/latest";
 
 
 
 
-// Кнопка скачивания
 
 function downloadLauncher() {
 
@@ -27,7 +22,6 @@ function downloadLauncher() {
 
 
 
-// Плавное появление элементов
 
 const observer = new IntersectionObserver(
 
@@ -94,7 +88,6 @@ document
 
 
 
-// Эффект случайных частиц на фоне
 
 function createParticle(){
 
