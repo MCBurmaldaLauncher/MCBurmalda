@@ -5,7 +5,7 @@
 
 // Ссылка на скачивание лаунчера
 const launcherDownload =
-"https://github.com/MCBurmaldaLauncher/MCBurmaldaLauncher/releases/latest";
+"https://github.com/MCBurmaldaLauncher/MCBurmaldaLauncher/releases/download/Minecraft/MCBurmaldaLauncher.exe";
 
 
 
